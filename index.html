@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Odin Calculator</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="calculator">
+    <div class="title-text">
+      <div class="title">Odin Calculator</div>
+      <a href="https://github.com/steelcol">Cole Steele</a>
+    </div>
     <div class="container"> 
-        <div id="display"> 42</div>
+        <div id="display">
+          <div id="second-display"></div>
+          <div id="main-display"></div>
+        </div>
         <button type="button" class="clear" value="clear">AC</button>
         <button type="button" class="sign" value="sign">+/-</button>
         <button type="button" class="percent" value="percent">%</button>
@@ -30,7 +37,6 @@
         <button type="button" class="operand" value="0">0</button>
         <button type="button" class="operand" value=".">.</button>
         <button type="button" class="operator" value="=">=</button>
-
     </div>
 </div>
 

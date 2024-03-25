@@ -1,15 +1,37 @@
 body {
-    background: radial-gradient(rgb(254, 190, 126) 0%, rgb(254, 190, 126) 100%);
-
+    background: rgb(254, 190, 126);
 } 
+
+a {
+    text-decoration: none;
+    color: black;
+}
 
 .calculator {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     
 }
+
+.title-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap: 146px;
+    
+}
+
+.title{
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+
+
 
 .container {
     display: grid;
@@ -27,21 +49,53 @@ body {
 
 #display{
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 80px;
+
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 80px;
+    min-height: 80px;
     justify-content: end;
     align-items: end;
     grid-column: 1 / -1;             /* Force calculator display to occupy the entire first row*/
     background-color: #e3e3e3;
     padding: 10px;
-    padding-right: 20px;
-    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-bottom: 8px;
     margin-bottom: 4px;
+
+    white-space: nowrap;      
+    overflow: hidden;         
+    text-overflow: ellipsis;  
     
     font-size: 50px;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Button UI */
+#main-display{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 60px; /* Set a base height */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#second-display {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 24px;
+
+    font-size: 24px;
+    color: rgb(92, 92, 92);
+    padding-right: 8px;
+}
+
+/* Button Grid UI */
 .sign, .clear, .percent,
 .operand, .operator{
     border-radius: 4px;
@@ -57,7 +111,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08s);    
 }
 
-.hover-effect {
+.hover-light {
     filter: brightness(1.25);
 }
 
