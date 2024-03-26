@@ -162,8 +162,8 @@ signButton.addEventListener('click', function(){
         num1 *= -1;
         display.textContent = num1;
     }
-    else if (operator && num2){
-        num2 = Number(num1);
+    else if (operator && num1){
+        num2 = Number(num2);
         num2 *= -1;
         display.textContent = num2;
     };
